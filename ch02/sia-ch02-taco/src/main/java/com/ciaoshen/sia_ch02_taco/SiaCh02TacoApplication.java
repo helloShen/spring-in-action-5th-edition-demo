@@ -14,7 +14,7 @@ public class SiaCh02TacoApplication implements WebMvcConfigurer {
 
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
-		registry.addViewController("/").setViewName("home");
+		registry.addViewController("redirect:/design").setViewName("design");
 	}
 
 }
