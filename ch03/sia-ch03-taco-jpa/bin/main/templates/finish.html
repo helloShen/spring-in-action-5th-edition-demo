@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Taco Cloud</title>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+            
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+          </style>
+    </head>
+
+    <body>
+        <h1>Your Taco will be delivered soon!</h1>
+        <table th:each="taco : ${myTacos}">
+            <tr>
+                <td>Taco Name</td>
+                <td th:text="${taco.name}">TACO-NAME</td>
+            </tr>
+            <tr th:each="ingredient : ${taco.ingredients}">
+                <td>Ingredient: </td>
+                <td th:text="${ingredient.name}">INGREDIENT-NAME</td>
+            </tr>
+        </table>
+
+        <h2>Your Infomations</h2>
+        <table>
+            <tr>
+              <td>Name: </td>
+              <td th:text="${name}">YOUR-NAME</td>
+            </tr>
+            <tr>
+              <td>Street: </td>
+              <td th:text="${street}">YOUR-STREET</td>
+            </tr>
+            <tr>
+              <td>City: </td>
+              <td th:text="${city}">YOUR-CITY</td>
+            </tr>
+            <tr>
+              <td>State: </td>
+              <td th:text="${state}">YOUR-STATE</td>
+            </tr>
+            <tr>
+              <td>Zip: </td>
+              <td th:text="${zip}">YOUR-ZIP</td>
+            </tr>
+        </table>
+    <body>
+
+</html>

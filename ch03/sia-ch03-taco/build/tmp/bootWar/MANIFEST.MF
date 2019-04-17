@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Start-Class: com.ciaoshen.sia_ch03_taco.SiaCh03TacoApplication
+Main-Class: org.springframework.boot.loader.WarLauncher
+
